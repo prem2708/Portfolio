@@ -144,7 +144,7 @@ export default function Hero() {
                 <Github className="w-6 h-6 text-white group-hover:text-cyan-400 transition-colors duration-300 group-hover:rotate-12 transition-transform duration-300" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/prem-kumar-560549373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/25 animate-float-delay-1-smooth"

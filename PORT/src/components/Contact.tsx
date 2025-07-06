@@ -51,7 +51,7 @@ export default function Contact() {
               <p className="text-gray-400 text-sm mb-6 text-center">Follow me on social media</p>
               <div className="flex justify-center space-x-6">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/prem-kumar-560549373?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                   className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-400 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
                 >
                   <Linkedin className="w-6 h-6" />
