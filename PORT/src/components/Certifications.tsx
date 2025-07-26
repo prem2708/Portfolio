@@ -125,7 +125,7 @@ export default function Certifications() {
     },
 
     {
-      title: 'Certificate of Completion – AI Tools Mastery Program',
+      title: 'Certificate of Completion  AI Tools Mastery Program',
       issuer: 'be10x (Signed by Aditya Goenka & Aditya Kachave, Co-founders)',
       date: 'July 26,2025',
       icon: Star,
