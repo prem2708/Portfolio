@@ -1,6 +1,14 @@
 
 
 
+
+<p align="center">
+  <a href="https://portfolio-byprem.up.railway.app/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/rocket--v2.png" width="32" style="vertical-align:middle;" alt="Rocket Icon"/>
+    <span style="font-size:1.2em;vertical-align:middle;"><b>Live Portfolio:</b> <code>portfolio-byprem.up.railway.app</code></span>
+  </a>
+</p>
+
 <h1 align="center">🚀 <span style="color:#38B2AC">Portfolio by Prem Kumar</span></h1>
 
 <p align="center">
