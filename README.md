@@ -96,7 +96,7 @@ npm run dev
 ## 📬 Contact
 
 - **Email:** preminnovator2708@gmail.com
-- **LinkedIn:** [Prem Kumar](https://www.linkedin.com/in/premkumar2708/)
+- **LinkedIn:** [Prem Kumar](https://www.linkedin.com/in/prem-kumar-560549373)
 
 
 ---
