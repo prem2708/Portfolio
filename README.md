@@ -70,7 +70,7 @@ It features a beautiful interactive slider, dark mode, and showcases my best pro
 
 | Project         | Description                                                                                       | Demo Link                                                                                  |
 |-----------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| **AI Doctor**   | Instant medical advice using AI. Inspired by [AI with Hassan](https://www.youtube.com/@AIwithHassan). | [Live](https://ai-doctor-s7xi.onrender.com) &#124; [GitHub](https://github.com/prem2708/AI_DOCTOR.git) |
+| **AI Doctor**   | Instant medical advice using AI. Inspired by [AI with Hassan](https://www.youtube.com/@AI.with.Hassan). | [Live](https://ai-doctor-s7xi.onrender.com) &#124; [GitHub](https://github.com/prem2708/AI_DOCTOR.git) |
 | **AI-Image Generator** | Generate unique images from text prompts using advanced AI models.                        | [Live](https://aiimagegeneratortool-production.up.railway.app) &#124; [GitHub](https://github.com/prem2708/Ai_image_generator_tool.git) |
 | **AI-Resume Builder**  | Create professional resumes in minutes with AI guidance.                                   | [Live](https://ai-resume-byprem.netlify.app) &#124; [GitHub](https://github.com/prem2708/AI-resume-builder.git) |
 | **AI-Chatbot**         | Creative AI-powered chatbot for inspiration and fun.                                       | [Live](https://aibot-musebot-byvoxnova-hackthonproj.netlify.app) &#124; [GitHub](https://github.com/prem2708/aibot-musebot-byvoxnova.git) |
@@ -96,7 +96,7 @@ npm run dev
 
 ## 🙏 Acknowledgements
 
-- [AI with Hassan](https://www.youtube.com/@AIwithHassan) for AI Doctor inspiration
+- [AI with Hassan](https://www.youtube.com/@AI.with.Hassan) for AI Doctor inspiration
 - [Lucide Icons](https://lucide.dev/)
 - [ImageKit](https://imagekit.io/) for image hosting
 
