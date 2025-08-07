@@ -95,7 +95,7 @@ npm run dev
 
 ## 📬 Contact
 
-- **Email:** premkumar2708@gmail.com
+- **Email:** preminnovator2708@gmail.com
 - **LinkedIn:** [Prem Kumar](https://www.linkedin.com/in/premkumar2708/)
 
 
@@ -104,5 +104,5 @@ npm run dev
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=435&lines=Thanks+for+visiting+my+portfolio!;" alt="Thanks for visiting!" />
   <br>
-  <img src="https://skillicons.dev/icons?i=linkedin,github" height="30"/>
+  <img src="https://skillicons.dev/icons?i=linkedin,email,github" height="30"/>
 </p>
