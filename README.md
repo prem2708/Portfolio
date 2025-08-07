@@ -2,12 +2,7 @@
 
 
 
-<p align="center">
-  <a href="https://portfolio-byprem.up.railway.app/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/rocket--v2.png" width="32" style="vertical-align:middle;" alt="Rocket Icon"/>
-    <span style="font-size:1.2em;vertical-align:middle;"><b>Live Portfolio:</b> <code>portfolio-byprem.up.railway.app</code></span>
-  </a>
-</p>
+
 
 <h1 align="center">🚀 <span style="color:#38B2AC">Portfolio by Prem Kumar</span></h1>
 
@@ -29,8 +24,14 @@
 
 ## ✨ Overview
 
+
 Welcome to my **Portfolio**!  
 <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" height="20"/> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" height="20"/> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" height="20"/> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=FFD62E" height="20"/> <img src="https://img.shields.io/badge/Lucide-Icons-yellow?style=flat-square" height="20"/>
+
+<br>
+<a href="https://portfolio-byprem.up.railway.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Live%20Portfolio-portfolio--byprem.up.railway.app-red?style=for-the-badge&logo=rocket" alt="Live Portfolio" />
+</a>
 
 This is a modern, responsive web application built with <b>React</b>, <b>TypeScript</b>, and <b>Tailwind CSS</b>.<br>
 It features a beautiful interactive slider, dark mode, and showcases my best projects in AI, web development, and design.
