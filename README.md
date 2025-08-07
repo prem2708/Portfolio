@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://ik.imagekit.io/prem2727/portfolio-logo.png" alt="Portfolio Logo" width="120" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Iron_Man_face.svg" alt="Iron Man Logo" width="120" />
 </p>
 
 <h1 align="center">🚀 <span style="color:#38B2AC">Portfolio by Prem Kumar</span></h1>
@@ -64,10 +64,10 @@ It features a beautiful interactive slider, dark mode, and showcases my best pro
 | Project         | Description                                                                                       | Demo Link                                                                                  |
 |-----------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | **AI Doctor**   | Instant medical advice using AI. Inspired by [AI with Hassan](https://www.youtube.com/@AIwithHassan). | [Live](https://ai-doctor-s7xi.onrender.com) &#124; [GitHub](https://github.com/prem2708/AI_DOCTOR.git) |
-| **AI-Image Generator** | Generate unique images from text prompts using advanced AI models.                        | [Live](https://aiimagegeneratortool-production.up.railway.app) &#124; [GitHub](https://github.com/prem2708/AI-Image-Generator) |
-| **AI-Resume Builder**  | Create professional resumes in minutes with AI guidance.                                   | [Live](https://ai-resume-byprem.netlify.app) &#124; [GitHub](https://github.com/prem2708/AI-Resume-Builder) |
-| **AI-Chatbot**         | Creative AI-powered chatbot for inspiration and fun.                                       | [Live](https://aibot-musebot-byvoxnova-hackthonproj.netlify.app) &#124; [GitHub](https://github.com/prem2708/AI-Chatbot) |
-| **Yog and Asan**       | Informative yoga website built with HTML & CSS.                                            | [Live](https://yog-and-asan.netlify.app) &#124; [GitHub](https://github.com/prem2708/Yog-and-Asan) |
+| **AI-Image Generator** | Generate unique images from text prompts using advanced AI models.                        | [Live](https://aiimagegeneratortool-production.up.railway.app) &#124; [GitHub](https://github.com/prem2708/Ai_image_generator_tool.git) |
+| **AI-Resume Builder**  | Create professional resumes in minutes with AI guidance.                                   | [Live](https://ai-resume-byprem.netlify.app) &#124; [GitHub](https://github.com/prem2708/AI-resume-builder.git) |
+| **AI-Chatbot**         | Creative AI-powered chatbot for inspiration and fun.                                       | [Live](https://aibot-musebot-byvoxnova-hackthonproj.netlify.app) &#124; [GitHub](https://github.com/prem2708/aibot-musebot-byvoxnova.git) |
+| **Yog and Asan**       | Informative yoga website built with HTML & CSS.                                            | [Live](https://yog-and-asan.netlify.app) &#124; [GitHub](https://github.com/prem2708/yoga_and_asan_website-.git) |
 
 ---
 
@@ -104,7 +104,7 @@ npm run dev
 ---
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=435&lines=Thanks+for+visiting+my+portfolio!;Feel+free+to+explore,+connect+and+reach+out+anytime+%F0%9F%91%8B" alt="Thanks for visiting!" />
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=24&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=435&lines=Thanks+for+visiting+my+portfolio!;" alt="Thanks for visiting!" />
   <br>
   <img src="https://skillicons.dev/icons?i=linkedin,github" height="30"/>
 </p>
