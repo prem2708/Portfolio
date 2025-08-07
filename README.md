@@ -1,4 +1,4 @@
 # Portfolio
 
 <br>
-deploy link - https://portfolio-byprem.netlify.app
+deploy link - https://portfolio-byprem.up.railway.app

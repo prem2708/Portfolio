@@ -122,6 +122,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.55.28%20PM.jpeg?updatedAt=1751790346884',
       certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%2010.pdf?updatedAt=1751787670653',
       description: 'Successfully completed comprehensive training in Full Stack Web Development using Python in the IT sector under the guidance of Shashi Infotech. This intensive 7-week training program covered both frontend and backend development using Python technologies, providing hands-on experience with modern web development frameworks, database management, and full-stack application development. The training enhanced practical skills in building complete web applications from concept to deployment.'
+    },
+
+    {
+      title: 'Certificate of Completion  AI Tools Mastery Program',
+      issuer: 'be10x (Signed by Aditya Goenka & Aditya Kachave, Co-founders)',
+      date: 'July 26,2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
+      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
+      description: 'Awarded to Prem Kumar for successfully completing the full course on AI Tools Mastery Program. This certificate recognizes the achievement of mastering advanced AI tools and techniques, demonstrating proficiency in leveraging artificial intelligence for practical applications. The program covered a comprehensive curriculum designed to enhance skills in modern AI technologies and their real-world implementation.'
     }
   ];
 
