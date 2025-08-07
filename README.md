@@ -1,7 +1,5 @@
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Iron_Man_face.svg" alt="Iron Man Logo" width="120" />
-</p>
+
 
 <h1 align="center">🚀 <span style="color:#38B2AC">Portfolio by Prem Kumar</span></h1>
 
