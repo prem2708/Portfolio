@@ -47,6 +47,18 @@ export default function Projects() {
       github:'https://github.com/prem2708/yoga_and_asan_website-.git',
       demo:'https://yog-and-asan.netlify.app'
     },
+
+    
+    {
+      title: 'AI Doctor',
+      description: 'AI Doctor is an intelligent web application that provides instant medical advice and health recommendations using advanced AI models. Users can describe their symptoms and receive helpful guidance, making healthcare more accessible and convenient. Inspired by the "AI with Hassan" YouTube channel, this project demonstrates the power of AI in healthcare and was built following tutorials from the channel.',
+      image: 'https://ik.imagekit.io/prem2727/Screenshot%202025-08-07%20210813.png?updatedAt=1754581134287', // Replace with your own thumbnail if available
+      tech: ['Python','GROQ','GRADIO'],
+      color: 'orange',
+      icon: Shield,
+      github: 'https://github.com/prem2708/AI_DOCTOR.git', // Replace with your repo if available
+      demo: 'https://ai-doctor-s7xi.onrender.com'
+    },
   ];
 
   const slidesPerView = 3;
