@@ -133,6 +133,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
       certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
       description: 'Awarded to Prem Kumar for successfully completing the full course on AI Tools Mastery Program. This certificate recognizes the achievement of mastering advanced AI tools and techniques, demonstrating proficiency in leveraging artificial intelligence for practical applications. The program covered a comprehensive curriculum designed to enhance skills in modern AI technologies and their real-world implementation.'
+    },
+
+    {
+      title: 'Oracle Certified Foundations Associate, Certificate of Recognition',
+      issuer: 'Oracle University (recognized by Oracle Corporation)',
+      date: 'September 1, 2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/orc.png?updatedAt=1756790187879',
+      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate.pdf?updatedAt=1756789708242',
+      description: 'Awarded to Prem Kumar for successfully completing the Oracle Certified Foundations Associate, Certificate of Recognition. This certificate recognizes the achievement of mastering the Oracle Foundations Associate, demonstrating proficiency in the Oracle database and its applications. The program covered a comprehensive curriculum designed to enhance skills in modern database technologies and their real-world implementation.'
     }
   ];
 
