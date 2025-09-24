@@ -59,6 +59,17 @@ export default function Projects() {
       github: 'https://github.com/prem2708/AI_DOCTOR.git', // Replace with your repo if available
       demo: 'https://ai-doctor-s7xi.onrender.com'
     },
+
+    {
+      title: 'Aayam 2025 – Annual Tech & Cultural Fest',
+      description: 'Aayam 2025 is the official website for the annual tech and cultural fest, providing event details, schedules, registration, and highlights. The site features a vibrant, modern design to engage students and visitors, showcasing workshops, competitions, and cultural programs.',
+      image: 'https://ik.imagekit.io/prem2727/AAY.png?updatedAt=1758727640842', // Replace with your own thumbnail if available
+      tech: ['HTML', 'CSS','JavaScript','GOOGLE FORMS','NETLIFY'],
+      color: 'orange',
+      icon: Shield,
+      github: 'https://github.com/prem2708/Hackthon_website.git', // Replace with your repo if available
+      demo: 'https://aayam2025.netlify.app/'
+    },
   ];
 
   const slidesPerView = 3;
