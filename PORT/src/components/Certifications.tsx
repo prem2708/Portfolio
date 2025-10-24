@@ -144,6 +144,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/orc.png?updatedAt=1756790187879',
       certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate.pdf?updatedAt=1756789708242',
       description: 'Awarded to Prem Kumar for successfully completing the Oracle Certified Foundations Associate, Certificate of Recognition. This certificate recognizes the achievement of mastering the Oracle Foundations Associate, demonstrating proficiency in the Oracle database and its applications. The program covered a comprehensive curriculum designed to enhance skills in modern database technologies and their real-world implementation.'
+    },
+
+    {
+      title: 'Oracle Cloud Infrastructure 2025 — Certified Generative AI Professional',
+      issuer: 'Oracle University (recognized by Oracle Corporation)',
+      date: 'October 23, 2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-10-24%20230504.png?updatedAt=1761327430117',
+      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate%20(1).pdf?updatedAt=1761327327226',
+      description: 'Certificate of recognition validating proficiency in building, deploying, and managing generative AI solutions on Oracle Cloud Infrastructure (OCI). Covers OCI services, generative AI workflows, security & best practices, and demonstrates professional-level competency in OCI generative AI technologies.'
     }
   ];
 
