@@ -8,7 +8,7 @@
 
 <p align="center">
   <b>✨ Showcasing AI, Web Development, and Creative Projects</b><br>
-  <a href="https://portfolio-byprem.up.railway.app" target="_blank">
+  <a href="https://portfoliobyprem.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/Live%20Demo-Visit-blueviolet?style=for-the-badge&logo=vercel" alt="Live Demo" />
   </a>
   <a href="https://github.com/prem2708/Portfolio" target="_blank">
@@ -29,7 +29,7 @@ Welcome to my **Portfolio**!
 <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" height="20"/> <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" height="20"/> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" height="20"/> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=FFD62E" height="20"/> <img src="https://img.shields.io/badge/Lucide-Icons-yellow?style=flat-square" height="20"/>
 
 <br>
-<a href="https://portfolio-byprem.up.railway.app/" target="_blank">
+<a href="https://portfoliobyprem.netlify.app/" target="_blank">
   <img src="https://img.shields.io/badge/Live%20Portfolio-portfolio--byprem.up.railway.app-red?style=for-the-badge&logo=rocket" alt="Live Portfolio" />
 </a>
 
