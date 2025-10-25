@@ -1,13 +1,24 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Award, Star, CheckCircle, Trophy, Eye, ExternalLink, X } from 'lucide-react';
 
+interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  thumbnail: string;
+  certificateUrl: string;
+  description: string;
+}
+
 export default function Certifications() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [selectedCert, setSelectedCert] = useState<any>(null);
-  const [showModal, setShowModal] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
+  const [showModal, setShowModal] = useState<boolean>(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const certifications = [
+  const certifications: Certification[] = [
     {
       title: 'Certificate of Appreciation - Science Exhibition',
       issuer: 'RKDF University Ranchi',
@@ -170,11 +181,11 @@ export default function Certifications() {
   }, [currentSlide]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    setCurrentSlide((prev: number) => (prev + 1) % totalSlides);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    setCurrentSlide((prev: number) => (prev - 1 + totalSlides) % totalSlides);
   };
 
   const goToSlide = (index: number) => {
@@ -186,7 +197,7 @@ export default function Certifications() {
     return certifications.slice(startIndex, startIndex + slidesPerView);
   };
 
-  const handleViewCert = (cert: any) => {
+  const handleViewCert = (cert: Certification) => {
     setSelectedCert(cert);
     setShowModal(true);
   };
@@ -196,8 +207,8 @@ export default function Certifications() {
     setSelectedCert(null);
   };
 
-  const getColorClasses = (color: string) => {
-    const colors = {
+  const getColorClasses = (color: string): string => {
+    const colors: Record<string, string> = {
       cyan: 'border-cyan-400/60 shadow-cyan-400/10',
       purple: 'border-purple-400/60 shadow-purple-400/10',
       pink: 'border-pink-400/60 shadow-pink-400/10',
@@ -205,7 +216,7 @@ export default function Certifications() {
       blue: 'border-blue-400/60 shadow-blue-400/10',
       orange: 'border-orange-400/60 shadow-orange-400/10',
     };
-    return colors[color as keyof typeof colors] || colors.cyan;
+    return colors[color] || colors.cyan;
   };
 
   return (
