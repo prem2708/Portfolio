@@ -2,10 +2,10 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "Set-Location PORT; npm run preview"
+startCommand = "chmod +x start.sh && ./start.sh"
 healthcheckPath = "/"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
 
 [build.buildCommand]
-command = "Set-Location PORT; npm install; npm run build"
+command = "cd PORT && npm install && npm run build"

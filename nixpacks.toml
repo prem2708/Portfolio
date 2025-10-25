@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs", "npm"]
+
+[phases.install]
+cmds = ["cd PORT && npm install"]
+
+[phases.build]
+cmds = ["cd PORT && npm run build"]
+
+[start]
+cmd = "cd PORT && npm run preview"
