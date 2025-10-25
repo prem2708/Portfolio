@@ -30,7 +30,7 @@ Welcome to my **Portfolio**!
 
 <br>
 <a href="https://portfoliobyprem.netlify.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Live%20Portfolio-portfolio--byprem.up.railway.app-red?style=for-the-badge&logo=rocket" alt="Live Portfolio" />
+  <img src="https://img.shields.io/badge/Live%20Portfolio-portfoliobyprem.netlify.app-red?style=for-the-badge&logo=rocket" alt="Live Portfolio" />
 </a>
 
 This is a modern, responsive web application built with <b>React</b>, <b>TypeScript</b>, and <b>Tailwind CSS</b>.<br>
