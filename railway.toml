@@ -6,3 +6,6 @@ startCommand = "cd PORT && npm run preview"
 healthcheckPath = "/"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
+
+[build.buildCommand]
+command = "cd PORT && npm install && npm run build"
