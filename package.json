@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "scripts": {
-    "build": "cd PORT && npm install && npm run build",
-    "start": "cd PORT && npm run preview",
-    "dev": "cd PORT && npm run dev",
-    "install-deps": "cd PORT && npm install",
-    "preview": "cd PORT && npm run preview"
+    "build": "Set-Location PORT; npm install; npm run build",
+    "start": "Set-Location PORT; npm run preview",
+    "dev": "Set-Location PORT; npm run dev",
+    "install-deps": "Set-Location PORT; npm install",
+    "preview": "Set-Location PORT; npm run preview"
   },
   "engines": {
     "node": ">=18.0.0"

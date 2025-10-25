@@ -1,1 +1,1 @@
-web: cd PORT && npm run preview
+web: Set-Location PORT; npm run preview
