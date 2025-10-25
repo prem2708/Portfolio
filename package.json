@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "scripts": {
+    "build": "cd PORT && npm run build",
+    "start": "cd PORT && npm run preview",
+    "dev": "cd PORT && npm run dev",
+    "install-deps": "cd PORT && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
