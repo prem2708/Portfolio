@@ -4,7 +4,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "cd PORT && npm run preview",
+    "startCommand": "Set-Location PORT; npm run dev",
     "healthcheckPath": "/",
     "healthcheckTimeout": 100,
     "restartPolicyType": "on_failure"
