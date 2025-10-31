@@ -166,6 +166,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-10-24%20230504.png?updatedAt=1761327430117',
       certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate%20(1).pdf?updatedAt=1761327327226',
       description: 'Certificate of recognition validating proficiency in building, deploying, and managing generative AI solutions on Oracle Cloud Infrastructure (OCI). Covers OCI services, generative AI workflows, security & best practices, and demonstrates professional-level competency in OCI generative AI technologies.'
+    },
+
+    {
+      title: ' Postman API Fundamentals Student Expert',
+      issuer: 'Postman',
+      date: 'November 1, 2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-11-01%20013157.png?updatedAt=1761941035728',
+      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/postman.pdf?updatedAt=1761940973471',
+      description: 'Awarded to Prem Kumar for successfully completing the Postman API Fundamentals Student Expert certification. This certificate recognizes the achievement of mastering API fundamentals using Postman, demonstrating proficiency in designing, testing, and managing APIs. The program covered a comprehensive curriculum designed to enhance skills in modern API development and their real-world implementation.'
     }
   ];
 
