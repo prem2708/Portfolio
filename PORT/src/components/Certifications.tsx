@@ -188,6 +188,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/certificate-20251101014110.png',
       certificateUrl: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=drive_link',
       description: 'Certificate confirming that Prem successfully completed an internship (Python Bootcamp) at Pantech Prolabs India Pvt Ltd — practical training in Python programming fundamentals, scripting, problem solving, and hands‑on project work under company mentorship'
+    },
+
+    {
+      title: ' Certificate of Training — Artificial Intelligences',
+      issuer: 'Innoknowvex (verified by Ministry of MSME / #startupindia)',
+      date: ' 06/08/2025 – 07/10/2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Prem%20Kumar%20%20-%20Training%20Certificate.png',
+      certificateUrl: 'https://drive.google.com/file/d/1eEAc9sigKpHN99GYQivDC5rFxLgLwJNk/view?usp=drive_link',
+      description: ' Certificate confirming successful completion of a structured training program in Artificial Intelligences. Recognizes commitment, practical skill development, and contribution to the training cohort through hands‑on exercises and project work.'
     }
   ];
 
