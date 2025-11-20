@@ -177,6 +177,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-11-01%20013157.png?updatedAt=1761941035728',
       certificateUrl: 'https://drive.google.com/file/d/1CrWwaQ9iFbd9t1p9mDGGj6Dhm6KzrsTF/view?usp=drive_link',
       description: 'Awarded to Prem Kumar for successfully completing the Postman API Fundamentals Student Expert certification. This certificate recognizes the achievement of mastering API fundamentals using Postman, demonstrating proficiency in designing, testing, and managing APIs. The program covered a comprehensive curriculum designed to enhance skills in modern API development and their real-world implementation.'
+    },
+
+     {
+      title: ' Certificate of Internship — Internship on Python Bootcamp',
+      issuer: 'Pantech Prolabs India Pvt Ltd (branded as PANTECHSOLUTIONS)',
+      date: '14 August 2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=sharing',
+      certificateUrl: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=drive_link',
+      description: 'Certificate confirming that Prem successfully completed an internship (Python Bootcamp) at Pantech Prolabs India Pvt Ltd — practical training in Python programming fundamentals, scripting, problem solving, and hands‑on project work under company mentorship'
     }
   ];
 
