@@ -26,7 +26,7 @@ export default function Certifications() {
       icon: Award,
       color: 'cyan',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.16.01%20PM.jpeg?updatedAt=1751788085197',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%201.pdf?updatedAt=1751787670888',
+      certificateUrl: 'https://drive.google.com/file/d/1Ehrb7O4D67kXjHA-txyhghNIWYomlMS1/view?usp=sharing',
       description: "Awarded for participating in the Science Exhibition held on Engineer's Day 2023 and achieving 3rd position. This certificate recognizes outstanding participation and achievement in the university annual science exhibition, demonstrating technical skills and innovative thinking in engineering projects."
     },
     {
@@ -36,7 +36,7 @@ export default function Certifications() {
       icon: Star,
       color: 'purple',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.21.00%20PM.jpeg?updatedAt=1751788341912',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef2.pdf?updatedAt=1751787670965',
+      certificateUrl: 'https://drive.google.com/file/d/1KKaNKiWPJiozJduXwD1LM-f8VIAadjPl/view?usp=drive_link',
       description: 'Successfully completed a comprehensive 5-day workshop on 2D & 3D Modelling using AutoCAD. This intensive training program covered advanced computer-aided design techniques, 3D modeling principles, and practical applications in engineering design. The workshop enhanced technical skills in digital design and modeling software essential for modern engineering projects.'
     },
     {
@@ -46,7 +46,7 @@ export default function Certifications() {
       icon: CheckCircle,
       color: 'pink',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.25.18%20PM.jpeg?updatedAt=1751788622413',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%203.pdf?updatedAt=1751787670300',
+      certificateUrl: 'https://drive.google.com/file/d/1BCtH9_w2UWOIOCpxoWXrB_cSUMq-PG72/view?usp=drive_link',
       description: 'Successfully completed a comprehensive 1-day AI Tools Workshop focused on artificial intelligence applications and tools. This intensive workshop provided hands-on experience with cutting-edge AI technologies, machine learning tools, and practical applications of artificial intelligence in modern software development and problem-solving.'
     },
     {
@@ -56,7 +56,7 @@ export default function Certifications() {
       icon: Trophy,
       color: 'lime',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.29.02%20PM.jpeg?updatedAt=1751788819788',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef4.pdf?updatedAt=1751787670798',
+      certificateUrl: 'https://drive.google.com/file/d/1W-L-aHz9khblKZtjjLEZbggGNNMsbDPH/view?usp=drive_link',
       description: 'Actively participated in the prestigious NATIONAL WORKSHOP on "Advancement in Minerals Processing Techniques with special reference to Iron and Coal" (AMPTIC-2024). This comprehensive workshop was organized by the Department of Metallurgical and Materials Engineering at NIT Jamshedpur, focusing on advanced techniques in mineral processing, particularly in iron and coal processing technologies. The workshop provided insights into cutting-edge research and industrial applications in metallurgical engineering.'
     },
     {
@@ -66,7 +66,7 @@ export default function Certifications() {
       icon: Award,
       color: 'blue',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.33.34%20PM.jpeg?updatedAt=1751789094331',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%205.pdf?updatedAt=1751787670424',
+      certificateUrl: 'https://drive.google.com/file/d/12CbE0uE2SZyedA7Z_BoFpjt8XzOvB-ii/view?usp=drive_link',
       description: 'Participated in the prestigious SymbioSphere 2024 conference organized in collaboration with the Association of Indian Universities (AIU). This interdisciplinary conference focused on the convergence of science, technology, and pharmaceutical sciences with sustainable eco-friendly solutions. The event explored innovative approaches to sustainability in pharmaceutical and life sciences, emphasizing environmental consciousness and technological advancement in healthcare and biotechnology.'
     },
     {
@@ -76,7 +76,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.39.13%20PM.jpeg?updatedAt=1751789450566',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%206.pdf?updatedAt=1751787670594',
+      certificateUrl: 'https://drive.google.com/file/d/16Ll98puA7A8wuwrsYFdB406vv13f4DXs/view?usp=drive_link',
       description: 'Participated in the Two Days International Conference on "Navigating the Intersection of Science, Technology and Pharmaceuticals with Ecofriendly Solutions towards Sustainability - SymbioSphere 2024". This prestigious international conference was organized in collaboration with the Association of Indian Universities (AIU), bringing together experts from multiple disciplines to explore sustainable solutions at the intersection of science, technology, and pharmaceutical sciences. The conference focused on eco-friendly approaches and sustainable practices in pharmaceutical and life sciences research.'
     },
 
@@ -87,7 +87,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.42.58%20PM.jpeg?updatedAt=1751789670760',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%207.pdf?updatedAt=1751787670944',
+      certificateUrl: 'https://drive.google.com/file/d/1lBbz5hNM9hJQACqdcnV-yjTNEiPOgxhh/view?usp=drive_link',
       description: 'Recognized for outstanding contributions as a volunteer in the 2-day International Conference "Navigating the Intersection of Science, Technology & Pharmaceuticals with Ecofriendly Solutions towards Sustainability - SymbioSphere 2024". This certificate acknowledges dedicated service and support in organizing and facilitating the prestigious international conference organized in collaboration with the Association of Indian Universities (AIU). The volunteer role involved assisting with conference logistics, participant coordination, and ensuring smooth execution of the interdisciplinary scientific event.'
     },
 
@@ -98,7 +98,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.47.54%20PM.jpeg?updatedAt=1751789895212',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%208.pdf?updatedAt=1751787670824',
+      certificateUrl: 'https://drive.google.com/file/d/1dkZP7OO357EwZLRbA9RG6_Px0Ow2RR-t/view?usp=drive_link',
       description: ' Successfully participated in the Hackathon event organized as part of EKLAVYA TECHFEST 2025, hosted by the Department of Computer Application at DSPMU. This competitive coding event provided an opportunity to showcase programming skills, problem-solving abilities, and innovative thinking in a time-constrained environment. The hackathon fostered collaboration, creativity, and technical expertise in software development and computer applications.'
     },
 
@@ -109,7 +109,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.52.11%20PM.jpeg?updatedAt=1751790157487',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%209.pdf?updatedAt=1751787670413',
+      certificateUrl: 'https://drive.google.com/file/d/10SHNmBO8EhUHGNa5IEtKvPhFr632RC-N/view?usp=drive_link',
       description: ' Successfully completed an advanced course on "STOCK MARKET ADVANCE TRADING" with "Research In and Out" under the guidance of Raushan Singh. This comprehensive training program covered advanced trading strategies, market analysis techniques, risk management, and practical applications in stock market trading. The course provided hands-on experience with sophisticated trading methodologies and market research approaches.'
     },
 
@@ -120,7 +120,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/pantechai_logo.jpg?updatedAt=1751790676261',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/WW_3AI_OL_6645.pdf?updatedAt=1751790460325',
+      certificateUrl: 'https://drive.google.com/file/d/1DAyW9eLqTdN7NPeKUXgN_ODHXALYH3Np/view?usp=drive_link',
       description: ' Successfully secured a three-month online internship position at Pantech.AI, working in the development team under the supervision of Sanjay. This prestigious internship opportunity provides hands-on experience in software development, contributing to meaningful projects within the organization. The internship focuses on gaining valuable skills and insights in modern development practices, while working with cutting-edge technologies in an AI-focused company environment.'
     },
 
@@ -131,7 +131,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.55.28%20PM.jpeg?updatedAt=1751790346884',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/cef%2010.pdf?updatedAt=1751787670653',
+      certificateUrl: 'https://drive.google.com/file/d/1vsQ_VGiL9OccM9XIgcNim9JtWE-DmkPf/view?usp=drive_link',
       description: 'Successfully completed comprehensive training in Full Stack Web Development using Python in the IT sector under the guidance of Shashi Infotech. This intensive 7-week training program covered both frontend and backend development using Python technologies, providing hands-on experience with modern web development frameworks, database management, and full-stack application development. The training enhanced practical skills in building complete web applications from concept to deployment.'
     },
 
@@ -142,7 +142,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1753517269064',
+      certificateUrl: 'https://drive.google.com/file/d/19AkeEkkvzPl52_fGKojd108YSs9VpDML/view?usp=drive_link',
       description: 'Awarded to Prem Kumar for successfully completing the full course on AI Tools Mastery Program. This certificate recognizes the achievement of mastering advanced AI tools and techniques, demonstrating proficiency in leveraging artificial intelligence for practical applications. The program covered a comprehensive curriculum designed to enhance skills in modern AI technologies and their real-world implementation.'
     },
 
@@ -153,7 +153,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/orc.png?updatedAt=1756790187879',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate.pdf?updatedAt=1756789708242',
+      certificateUrl: 'https://drive.google.com/file/d/1iwsk-MJ1UDsEhqfgEOX0qTmUUDr6tP5j/view?usp=drive_link',
       description: 'Awarded to Prem Kumar for successfully completing the Oracle Certified Foundations Associate, Certificate of Recognition. This certificate recognizes the achievement of mastering the Oracle Foundations Associate, demonstrating proficiency in the Oracle database and its applications. The program covered a comprehensive curriculum designed to enhance skills in modern database technologies and their real-world implementation.'
     },
 
@@ -164,7 +164,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-10-24%20230504.png?updatedAt=1761327430117',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/eCertificate%20(1).pdf?updatedAt=1761327327226',
+      certificateUrl: 'https://drive.google.com/file/d/1eBlfZflDzcopSc7nGuwlNWzL21FGQ7lT/view?usp=drive_link',
       description: 'Certificate of recognition validating proficiency in building, deploying, and managing generative AI solutions on Oracle Cloud Infrastructure (OCI). Covers OCI services, generative AI workflows, security & best practices, and demonstrates professional-level competency in OCI generative AI technologies.'
     },
 
@@ -175,7 +175,7 @@ export default function Certifications() {
       icon: Star,
       color: 'orange',
       thumbnail: 'https://ik.imagekit.io/prem2727/certificate/Screenshot%202025-11-01%20013157.png?updatedAt=1761941035728',
-      certificateUrl: 'https://ik.imagekit.io/prem2727/certificate/postman.pdf?updatedAt=1761940973471',
+      certificateUrl: 'https://drive.google.com/file/d/1CrWwaQ9iFbd9t1p9mDGGj6Dhm6KzrsTF/view?usp=drive_link',
       description: 'Awarded to Prem Kumar for successfully completing the Postman API Fundamentals Student Expert certification. This certificate recognizes the achievement of mastering API fundamentals using Postman, demonstrating proficiency in designing, testing, and managing APIs. The program covered a comprehensive curriculum designed to enhance skills in modern API development and their real-world implementation.'
     }
   ];
