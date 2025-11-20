@@ -25,7 +25,7 @@ export default function Certifications() {
       date: "2023 (Engineer's Day)",
       icon: Award,
       color: 'cyan',
-      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/WhatsApp%20Image%202025-07-06%20at%201.16.01%20PM.jpeg?updatedAt=1751788085197',
+      thumbnail: 'https://drive.google.com/file/d/1Ehrb7O4D67kXjHA-txyhghNIWYomlMS1/view?usp=sharing',
       certificateUrl: 'https://drive.google.com/file/d/1Ehrb7O4D67kXjHA-txyhghNIWYomlMS1/view?usp=sharing',
       description: "Awarded for participating in the Science Exhibition held on Engineer's Day 2023 and achieving 3rd position. This certificate recognizes outstanding participation and achievement in the university annual science exhibition, demonstrating technical skills and innovative thinking in engineering projects."
     },
