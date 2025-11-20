@@ -185,7 +185,7 @@ export default function Certifications() {
       date: '14 August 2025',
       icon: Star,
       color: 'orange',
-      thumbnail: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=sharing',
+      thumbnail: 'https://ik.imagekit.io/prem2727/certificate/certificate-20251101014110.png',
       certificateUrl: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=drive_link',
       description: 'Certificate confirming that Prem successfully completed an internship (Python Bootcamp) at Pantech Prolabs India Pvt Ltd — practical training in Python programming fundamentals, scripting, problem solving, and hands‑on project work under company mentorship'
     }
