@@ -199,6 +199,17 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/Prem%20Kumar%20%20-%20Training%20Certificate.png',
       certificateUrl: 'https://drive.google.com/file/d/1eEAc9sigKpHN99GYQivDC5rFxLgLwJNk/view?usp=drive_link',
       description: ' Certificate confirming successful completion of a structured training program in Artificial Intelligences. Recognizes commitment, practical skill development, and contribution to the training cohort through hands‑on exercises and project work.'
+    },
+
+    {
+      title: ' Certificate of Training — Artificial Intelligences',
+      issuer: 'Innoknowvex (verified by Ministry of MSME / #startupindia)',
+      date: ' 09 October 2025 – 30 October 2025',
+      icon: Star,
+      color: 'orange',
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202025-11-22%20001858.png',
+      certificateUrl: 'https://drive.google.com/file/d/1rjFHFPBwWTnC1RbQplenGDnljvxZTKEl/view?usp=drive_link',
+      description: '  Confirms successful completion of an internship in Artificial Intelligence at Innoknowvex. Validates hands‑on training and contribution to company initiatives during the internship period, demonstrating practical AI skills and project involvement.'
     }
   ];
 
