@@ -9,7 +9,7 @@ export default function Projects() {
     {
       title: 'AI-Image Generator',
       description: 'A modern web application that allows users to generate unique images using advanced AI models. Enter a prompt, and the tool will create a custom image based on your description—perfect for designers, marketers, and anyone who needs creative visuals on demand.',
-      image: 'https://ik.imagekit.io/prem2727/home%20pa.PNG?updatedAt=1751738999596?auto=compress&cs=tinysrgb&w=500',
+      image: 'https://ik.imagekit.io/ioyklag3bb/home%20pa.PNG?updatedAt=1763748682526',
       tech: ['HTML', 'CSS','JavaScript', 'Python', 'SQLlite','Hugging Face'],
       color: 'cyan',
       icon: Zap,
@@ -20,7 +20,7 @@ export default function Projects() {
     {
       title: 'AI-Resume Builder ',
       description: 'A smart, user-friendly web application that helps you create professional resumes in minutes. Powered by AI, this tool guides you through the process, suggests improvements, and generates beautiful, job-ready resumes tailored to your needs.',
-      image: 'https://ik.imagekit.io/prem2727/thumb1.PNG?updatedAt=1751739669608?auto=compress&cs=tinysrgb&w=500',
+      image: 'https://ik.imagekit.io/ioyklag3bb/thumb1.PNG?updatedAt=1763748680542',
       tech: ['React.js', 'TypeScript', 'Tailwind CSS', 'Node.js','Google Gen AI'],
       color: 'purple',
       icon: Shield,
@@ -30,7 +30,7 @@ export default function Projects() {
     {
       title: 'AI-Chatbot',
       description: 'A collaborative hackathon project by the Voxnova team, AIbot Musebot is an innovative web application designed to inspire creativity and assist users with AI-powered image generation and creative tools. Built during a hackathon, this project showcases teamwork, rapid prototyping, and the power of modern web technologies.',
-      image: 'https://ik.imagekit.io/prem2727/thumb%202.PNG?updatedAt=1751740345894?auto=compress&cs=tinysrgb&w=500',
+      image: 'https://ik.imagekit.io/ioyklag3bb/thumb%202.PNG?updatedAt=1763748681177',
       tech: ['HTML', 'CSS', 'JavaScript', 'Dailogflow'],
       color: 'pink',
       icon: Sparkles,
@@ -40,7 +40,7 @@ export default function Projects() {
     {
       title: 'Yog and Asan',
       description: 'This is my first project, built using only HTML and CSS. The Yoga & Asan Website provides information about various yoga poses (asanas), their benefits, and how to practice them. The site features multiple pages, including home, about, courses, and contact, with a clean and simple design for easy navigation.',
-      image: 'https://ik.imagekit.io/prem2727/THUMB%203.PNG?updatedAt=1751740684309?auto=compress&cs=tinysrgb&w=500',
+      image: 'https://ik.imagekit.io/ioyklag3bb/THUMB%203.PNG?updatedAt=1763748682424',
       tech: ['HTML', 'CSS'],
       color: 'lime',
       icon: Zap,
@@ -52,7 +52,7 @@ export default function Projects() {
     {
       title: 'AI Doctor',
       description: 'AI Doctor is an intelligent web application that provides instant medical advice and health recommendations using advanced AI models. Users can describe their symptoms and receive helpful guidance, making healthcare more accessible and convenient. Inspired by the "AI with Hassan" YouTube channel, this project demonstrates the power of AI in healthcare and was built following tutorials from the channel.',
-      image: 'https://ik.imagekit.io/prem2727/Screenshot%202025-08-07%20210813.png?updatedAt=1754581134287', // Replace with your own thumbnail if available
+      image: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202025-08-07%20210813.png?updatedAt=1763748680038', // Replace with your own thumbnail if available
       tech: ['Python','GROQ','GRADIO'],
       color: 'orange',
       icon: Shield,
@@ -63,7 +63,7 @@ export default function Projects() {
     {
       title: 'Aayam 2025 – Annual Tech & Cultural Fest',
       description: 'Aayam 2025 is the official website for the annual tech and cultural fest, providing event details, schedules, registration, and highlights. The site features a vibrant, modern design to engage students and visitors, showcasing workshops, competitions, and cultural programs.',
-      image: 'https://ik.imagekit.io/prem2727/AAY.png?updatedAt=1758727640842', // Replace with your own thumbnail if available
+      image: 'https://ik.imagekit.io/ioyklag3bb/AAY.png?updatedAt=1763748682456', // Replace with your own thumbnail if available
       tech: ['HTML', 'CSS','JavaScript','GOOGLE FORMS','NETLIFY'],
       color: 'orange',
       icon: Shield,
