@@ -118,7 +118,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a
-                href="https://drive.google.com/file/d/1yuUz1tl6doNKTEqK4VjWnHcemqMAeutT/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1HV_etknICwmby-t8_D8h7Adr3qhI7Rg2/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-xl font-semibold font-exo transform hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center gap-3 relative overflow-hidden"
