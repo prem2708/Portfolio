@@ -210,6 +210,40 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202025-11-22%20001858.png',
       certificateUrl: 'https://drive.google.com/file/d/1rjFHFPBwWTnC1RbQplenGDnljvxZTKEl/view?usp=drive_link',
       description: '  Confirms successful completion of an internship in Artificial Intelligence at Innoknowvex. Validates hands‑on training and contribution to company initiatives during the internship period, demonstrating practical AI skills and project involvement.'
+    },
+
+    {
+      title: 'Certificate of Appreciation - AAYAM TECHFEST 2025 Organizing Committee',
+      issuer: 'RKDF University Ranchi',
+      date: 'September 15-16, 2025',
+      icon: Award,
+      color: 'cyan',
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-12-11%20at%207.48.16%20PM.jpeg?updatedAt=1765464435594',
+      certificateUrl: 'https://drive.google.com/file/d/1AC2xp2siO23aNlO0_sjwlhrWrfeSBA8b/view?usp=sharing',
+      description: 'Certificate of Appreciation awarded to Prem Kumar for valuable contribution as a member of the Organizing Committee for AAYAM TECHFEST 2025, organized by the Department of Computer Science & Engineering, RKDF University, Ranchi. This certificate recognizes dedication, teamwork, and effort in making AAYAM TECHFEST 2025 a grand success. The event, themed "Future of Workplace & Workforce", showcased innovative technologies and provided a platform for students to demonstrate their technical expertise and organizational capabilities.'
+    },
+
+    {
+      title: 'Certificate of Participation - AI संवाद (AI Samvad): Conversation on Cyber Safety & Innovation',
+      issuer: 'प्रभात खबर Media Group (Prabhat Khabar Media Group) - Supported by Google.org & CyberPeace',
+      date: 'December 8, 2025',
+      icon: CheckCircle,
+      color: 'purple',
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-12-11%20at%207.48.17%20PM.jpeg?updatedAt=1765464429214',
+      certificateUrl: 'https://drive.google.com/file/d/1yhU1B2LJwX3UkpfSSkO6WX7hUWf3MncI/view?usp=drive_link',
+      description: 'Certificate of Participation awarded to Prem Kumar from RKDF University for attending "AI संवाद" (AI Samvad), a Conversation on Cyber Safety & Innovation. This event, held on 8th December, 2025, in Ranchi, was an official pre-summit event of the AI Impact Summit 2026, organized by Prabhat Khabar Media Group with support from Google.org and CyberPeace. The event focused on discussions about artificial intelligence, cyber safety, and innovation, providing valuable insights into the future of AI technology and cybersecurity practices.'
+    },
+
+
+    {
+      title: 'Startup School: Prompt to Prototype — Certificate of Completion',
+      issuer: 'Google for Startups',
+      date: 'December 11, 2025',
+      icon: CheckCircle,
+      color: 'blue',
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/Screenshot%202025-12-11%20202305.png',
+      certificateUrl: 'https://drive.google.com/file/d/1ktZOUjKF7oEuMy7SAw0gtmT1qIFoOq8p/view?usp=drive_link',
+      description: 'Certificate of Completion awarded to Prem Kumar for completing the “Startup School: Prompt to Prototype” program by Google for Startups, demonstrating skills in taking AI-driven ideas from prompt to working prototype.'
     }
   ];
 
