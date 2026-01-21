@@ -1,280 +1,193 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Pause, Play, Cpu } from 'lucide-react';
+
+// Tech Icons as SVG components
+const TechIcons: { [key: string]: JSX.Element } = {
+  HTML: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" /><path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z" /><path fill="#EBEBEB" d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z" /><path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z" /></svg>,
+  CSS: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#1572B6" d="M18.814 114.123L8.76 1.352h110.48l-10.064 112.754-45.243 12.543z" /><path fill="#33A9DC" d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16z" /><path fill="#fff" d="M64.001 51.429h18.302l1.264-14.163H64.001V23.435h34.682l-.332 3.711-3.4 38.114h-30.95z" /><path fill="#EBEBEB" d="M64.083 87.349l-.061.018-15.403-4.159-.985-11.031H33.752l1.937 21.717 28.331 7.863.063-.018z" /><path fill="#fff" d="M81.127 64.675l-1.666 18.522-15.426 4.164v14.39l28.354-7.858.208-2.337 2.406-26.881z" /><path fill="#EBEBEB" d="M64.048 23.435v13.831H30.64l-.277-3.108-.63-7.012-.331-3.711zm-.047 27.994v13.831H48.792l-.277-3.108-.631-7.012-.33-3.711z" /></svg>,
+  JavaScript: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.184H1.408z" /><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z" /></svg>,
+  React: <svg viewBox="0 0 128 128" className="w-full h-full"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4" /><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z" /></g></svg>,
+  'Next.js': <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#fff" d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z" /></svg>,
+  'Node.js': <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#83CD29" d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623c-.712 0-2.306 1.061-2.306 1.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645 1.129 1.24 1.129h5.754c.354 0 .692-.286.94-.534.24-.249.392-.588.355-.944-.667-7.909-5.863-15.963-22.131-15.963-12.754 0-20.323 5.372-20.323 14.38 0 9.756 7.559 12.478 19.76 13.693 14.613 1.44 15.493 3.591 15.493 6.483 0 5.024-4.033 7.188-13.151 7.188z" /></svg>,
+  Python: <svg viewBox="0 0 128 128" className="w-full h-full"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stopColor="#5A9FD4" /><stop offset="1" stopColor="#306998" /></linearGradient><path fill="url(#a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" /><linearGradient id="b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stopColor="#FFD43B" /><stop offset="1" stopColor="#FFE873" /></linearGradient><path fill="url(#b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" /></svg>,
+  Django: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#003A2B" d="M126.5 1.5h-125v125h125z" /><path fill="#fff" d="M30.2 40h11.3v47.7c-5.8 1.1-10.1 1.5-14.7 1.5C14.1 89.2 8 83.6 8 71.7c0-11.4 6.6-18.8 17-18.8 2.1 0 3.7.2 5.2.7V40zM25.4 62.4c-4.8 0-7.6 3.4-7.6 9.4 0 5.8 2.7 9.1 7.5 9.1 1 0 1.9-.1 2.9-.2V63c-1-.4-1.9-.6-2.8-.6zM50 84.8V41.2l11.3-1.8v45.4H50zm29.4-31.4c-4 0-6.5 3.2-6.5 8.9 0 5.8 2.4 8.9 6.5 8.9 4.1 0 6.6-3.2 6.6-8.9-.1-5.7-2.5-8.9-6.6-8.9zm-.1-8.8c11.5 0 18.1 7.2 18.1 17.7 0 10.6-6.8 18-18.3 18-11.5 0-18-7.3-18-17.7.1-10.7 6.8-18 18.2-18z" /><circle fill="#fff" cx="55.8" cy="31.4" r="7" /></svg>,
+  Java: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#EA2D2E" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zM44.629 84.455s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" /><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" /><path fill="#EA2D2E" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.095.171-4.45-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.897-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zM90.609 93.041c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" /><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" /><path fill="#EA2D2E" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" /></svg>,
+  C: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z" /><path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z" /><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z" /></svg>,
+  'C++': <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#00599C" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z" /><path fill="#004482" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z" /><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z" /><path fill="#fff" d="M82.1 61.8h5.2v-5.3h4.4v5.3H97v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4zM102.5 61.8h5.2v-5.3h4.4v5.3h5.3v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4z" /></svg>,
+  'AI/ML': <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73A2 2 0 0112 2z" /><circle cx="9" cy="13" r="1.25" fill="currentColor" /><circle cx="15" cy="13" r="1.25" fill="currentColor" /><path d="M9 17h6" /></svg>,
+  'Premiere Pro': <svg viewBox="0 0 128 128" className="w-full h-full"><rect fill="#00005B" width="128" height="128" rx="12" /><path fill="#9999FF" d="M36 93V35h21.7c13.4 0 20.1 7.1 20.1 18.4 0 12.4-8.1 19.3-21.3 19.3H47.8V93H36zm11.8-28.8h6.5c6.3 0 9.6-3 9.6-9.5 0-6-3.2-8.9-9.5-8.9h-6.6v18.4zM83 93V60.8c0-4.2-.2-8.7-.4-13.1h10.3l.6 7.8h.2c2.5-5.1 7.2-8.8 14.1-8.8.9 0 1.6 0 2.4.1V58c-.9-.1-1.9-.2-3-.2-6.1 0-10.7 3.8-11.9 9.6-.2 1.1-.4 2.4-.4 3.7V93H83z" /></svg>,
+  Photoshop: <svg viewBox="0 0 128 128" className="w-full h-full"><rect fill="#001E36" width="128" height="128" rx="12" /><path fill="#31A8FF" d="M36 93V35h21.7c13.4 0 20.1 7.1 20.1 18.4 0 12.4-8.1 19.3-21.3 19.3H47.8V93H36zm11.8-28.8h6.5c6.3 0 9.6-3 9.6-9.5 0-6-3.2-8.9-9.5-8.9h-6.6v18.4zM92.5 94.2c-5.4 0-10.2-1.5-13.1-3.4l2.2-8.5c2.7 1.8 7.2 3.5 11.4 3.5 4.7 0 7.1-1.9 7.1-4.9 0-2.8-2.1-4.5-7.6-6.3-7.5-2.5-12.5-6.4-12.5-12.8 0-7.4 6.2-13 16.2-13 4.9 0 8.5 1 11.1 2.2l-2.2 8.2c-1.8-.9-5.1-2.1-9.1-2.1-4.3 0-6.4 1.9-6.4 4.3 0 2.9 2.5 4.2 8.4 6.3 8.1 2.9 11.8 6.9 11.8 12.9 0 7.2-5.6 13.6-17.3 13.6z" /></svg>,
+  MongoDB: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#439934" d="M64.7 6.3c-.3 0-.8.2-.8.2L46.6 22.2c-.2.5-.4 1-.4 1.6v68.4c0 .6.2 1.1.4 1.6L64 109.5l.7.4.7-.4 17.4-15.7c.2-.5.4-1 .4-1.6V23.8c0-.6-.2-1.1-.4-1.6L65.5 6.5s-.5-.2-.8-.2z" /><path fill="#45A538" d="M64.7 6.3v103.2l.7-.4 17.4-15.7c.2-.5.4-1 .4-1.6V23.8c0-.6-.2-1.1-.4-1.6L65.5 6.5s-.5-.2-.8-.2z" /><path fill="#46A037" d="M64 109.5l.7.4.7-.4-1.4-86.8-.7-.4-.7.4z" /></svg>,
+  MySQL: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#00618A" d="M2.001 90.458h4.108V74.235l6.36 14.143c.75 1.712 1.777 2.317 3.792 2.317s3.003-.605 3.753-2.317l6.36-14.143v16.223h4.108V71.963c0-1.633-.871-2.475-2.327-2.475h-2.921c-1.614 0-2.406.525-3.078 2.029l-6.201 13.934-6.122-13.934c-.633-1.504-1.464-2.029-3.078-2.029H3.833c-1.456 0-2.327.842-2.327 2.475v18.495h.495zM34.56 90.458h4.108V78.487l6.558 11.971h4.701l-6.994-12.576 6.756-11.733h-4.542l-6.479 11.377V66.15h-4.108v24.309-.001z" /><path fill="#E48E00" d="M61.26 69.727c-5.493 0-8.81 3.668-8.81 10.412 0 6.823 3.238 10.412 8.81 10.412 5.65 0 8.888-3.589 8.888-10.412 0-6.823-3.238-10.412-8.888-10.412zm0 17.235c-2.842 0-4.384-2.396-4.384-6.823s1.542-6.823 4.384-6.823c2.802 0 4.384 2.396 4.384 6.823s-1.582 6.823-4.384 6.823zM73.47 90.458h14.039v-3.589h-9.931V66.15H73.47v24.308z" /><path fill="#00618A" d="M116.426 73.323c-2.961-2.237-4.899-3.43-7.86-5.746-.752-.566-1.385-1.054-2.247-1.054h-1.781c-1.416 0-2.366.842-2.366 2.396v21.539h3.91V72.903c0-.249.08-.447.318-.447h.556c.318 0 .636.158.953.435l7.225 6.109c1.901 1.613 3.078 2.317 5.453 3.232-.08-.763-.159-1.763-.159-2.158v-9.597c0-1.752-.438-3.033-.438-3.033l3.117 2.634c.08.842.159 1.763.159 2.843v7.598c0 .487.08 1.07.159 1.594-2.375-.842-3.196-1.698-5.334-3.391l-1.665-1.399z" /><path fill="#E48E00" d="M95.778 73.244c-1.504-2.238-4.067-3.51-7.225-3.51-5.612 0-9.097 3.827-9.097 10.412 0 6.506 3.525 10.412 9.414 10.412 2.802 0 5.334-1.034 6.917-2.884v-4.183c-1.385 2.158-3.759 3.51-6.362 3.51-3.316 0-5.493-2.317-5.652-6.152h12.808c.08-.605.119-1.21.119-1.772-.001-2.079-.317-4.003-.922-5.833zm-11.917 4.183c.357-3.232 2.178-4.977 5.136-4.977 3.077 0 4.938 1.898 4.938 4.977H83.861z" /></svg>,
+  SQLite: <svg viewBox="0 0 128 128" className="w-full h-full"><path fill="#003B57" d="M117.688 85.313 85.313 117.688 64 96.375 96.375 64zm-85.376 0L64 117.688 96.375 85.313 64 53.125zm0-42.626L64 75.063 96.375 42.687 64 10.313zm42.626 0L42.563 75.063 75.063 42.687 42.563 10.313z" /><ellipse fill="#0F80CC" cx="64" cy="64" rx="54" ry="54" /><path fill="#003B57" d="M64 10c-29.776 0-54 24.224-54 54s24.224 54 54 54 54-24.224 54-54S93.776 10 64 10zm0 98c-24.262 0-44-19.738-44-44s19.738-44 44-44 44 19.738 44 44-19.738 44-44 44z" /></svg>,
+};
 
 export default function Skills() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const [itemsPerView, setItemsPerView] = useState(4);
 
   const skills = [
-    { name: 'HTML', level: 95, icon: '🌐', color: 'orange' },
-    { name: 'CSS', level: 90, icon: '🎨', color: 'blue' },
-    { name: 'JavaScript', level: 88, icon: '⚡', color: 'yellow' },
-    { name: 'React', level: 85, icon: '⚛️', color: 'cyan' },
-    { name: 'Next.js', level: 80, icon: '▲', color: 'white' },
-    { name: 'Node.js', level: 82, icon: '🟢', color: 'green' },
-    { name: 'Python', level: 85, icon: '🐍', color: 'blue' },
-    { name: 'Django', level: 78, icon: '🎯', color: 'green' },
-    { name: 'Java', level: 80, icon: '☕', color: 'orange' },
-    { name: 'C', level: 75, icon: '⚙️', color: 'gray' },
-    { name: 'C++', level: 78, icon: '🔧', color: 'blue' },
-    { name: 'AI/ML', level: 75, icon: '🤖', color: 'purple' },
-    { name: 'Adobe Premiere Pro', level: 78, icon: '🎬', color: 'purple' },
-    { name: 'Photoshop', level: 85, icon: '🖼️', color: 'blue' },
-    { name: 'MongoDB', level: 80, icon: '🍃', color: 'green' },
-    { name: 'MySQL', level: 82, icon: '🐬', color: 'blue' },
-    { name: 'SQLite', level: 85, icon: '💾', color: 'gray' },
+    { name: 'HTML', level: 95 },
+    { name: 'CSS', level: 90 },
+    { name: 'JavaScript', level: 88 },
+    { name: 'React', level: 85 },
+    { name: 'Next.js', level: 80 },
+    { name: 'Node.js', level: 82 },
+    { name: 'Python', level: 85 },
+    { name: 'Django', level: 78 },
+    { name: 'Java', level: 80 },
+    { name: 'C', level: 75 },
+    { name: 'C++', level: 78 },
+    { name: 'AI/ML', level: 75 },
+    { name: 'Premiere Pro', level: 78 },
+    { name: 'Photoshop', level: 85 },
+    { name: 'MongoDB', level: 80 },
+    { name: 'MySQL', level: 82 },
+    { name: 'SQLite', level: 85 },
   ];
 
-  const slidesPerView = 4;
-  const totalSlides = Math.ceil(skills.length / slidesPerView);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) setItemsPerView(1);
+      else if (window.innerWidth < 768) setItemsPerView(2);
+      else if (window.innerWidth < 1024) setItemsPerView(3);
+      else setItemsPerView(4);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalSlides = Math.ceil(skills.length / itemsPerView);
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, totalSlides]);
 
-  // Add smooth transition effect when slides change
-  useEffect(() => {
-    const cards = document.querySelectorAll('.skill-card');
-    cards.forEach((card, index) => {
-      (card as HTMLElement).style.animationDelay = `${index * 0.1}s`;
-    });
-  }, [currentSlide]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const getColorClasses = (color: string) => {
-    const colors = {
-      orange: 'from-orange-500 to-orange-600 shadow-orange-500/50',
-      blue: 'from-blue-500 to-blue-600 shadow-blue-500/50',
-      yellow: 'from-yellow-500 to-yellow-600 shadow-yellow-500/50',
-      cyan: 'from-cyan-500 to-cyan-600 shadow-cyan-500/50',
-      white: 'from-gray-300 to-gray-400 shadow-gray-400/50',
-      green: 'from-green-500 to-green-600 shadow-green-500/50',
-      purple: 'from-purple-500 to-purple-600 shadow-purple-500/50',
-      gray: 'from-gray-500 to-gray-600 shadow-gray-500/50',
-    };
-    return colors[color as keyof typeof colors] || colors.cyan;
-  };
-
-  const getTextColor = (color: string) => {
-    const colors = {
-      orange: 'text-orange-400',
-      blue: 'text-blue-400',
-      yellow: 'text-yellow-400',
-      cyan: 'text-cyan-400',
-      white: 'text-gray-300',
-      green: 'text-green-400',
-      purple: 'text-purple-400',
-      gray: 'text-gray-400',
-    };
-    return colors[color as keyof typeof colors] || 'text-cyan-400';
-  };
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
 
   const getCurrentSkills = () => {
-    const startIndex = currentSlide * slidesPerView;
-    return skills.slice(startIndex, startIndex + slidesPerView);
+    const startIndex = currentSlide * itemsPerView;
+    return skills.slice(startIndex, startIndex + itemsPerView);
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 relative overflow-hidden">
-      <style>{`
-        .slider-container {
-          scroll-behavior: smooth;
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .skill-card {
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          opacity: 0;
-          transform: translateY(20px) scale(0.95);
-          animation: slideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-        .skill-card:nth-child(1) { animation-delay: 0.1s; }
-        .skill-card:nth-child(2) { animation-delay: 0.2s; }
-        .skill-card:nth-child(3) { animation-delay: 0.3s; }
-        .skill-card:nth-child(4) { animation-delay: 0.4s; }
-        .skill-card:hover {
-          transform: translateY(-10px) scale(1.05);
-        }
-        @keyframes slideIn {
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-        .nav-dot {
-          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .nav-dot:hover {
-          transform: scale(1.2);
-        }
-        .nav-button {
-          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .nav-button:hover {
-          transform: scale(1.1);
-          box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-        .progress-bar {
-          transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-      `}</style>
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-pink-500 to-lime-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+    <section id="skills" className="py-20 sm:py-24 lg:py-32 section-space relative overflow-hidden">
+      <div className="absolute inset-0 data-grid opacity-30"></div>
+
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-cyan-500 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-600 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4 glow-text">
-            Technical Skills
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-6">
+            <Cpu className="w-4 h-4 text-cyan-400" />
+            <span className="text-xs font-rajdhani tracking-widest text-cyan-400 uppercase">System Capabilities</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-orbitron font-bold gradient-text-aurora mb-4">
+            TECH ARSENAL
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-exo">
-            Mastering Modern Technologies & Creative Tools
+          <p className="text-sm text-gray-400 font-rajdhani tracking-widest uppercase">
+            Power Systems & Core Technologies
           </p>
         </div>
 
-        {/* Interactive Slider */}
         <div className="mb-16">
-          <div className="relative">
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="nav-button absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/40 group"
-            >
-              <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="nav-button absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/40 group"
-            >
-              <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Slider Container */}
-            <div 
-              ref={sliderRef}
-              className="slider-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+          <div>
+            <div
+              className="grid gap-4 sm:gap-6"
+              style={{ gridTemplateColumns: `repeat(${itemsPerView}, 1fr)` }}
             >
               {getCurrentSkills().map((skill, index) => (
-              <div
-                key={index}
-                  className="skill-card bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-500 hover:shadow-xl group"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="text-3xl mr-3 group-hover:scale-110 transition-transform duration-500">
-                    {skill.icon}
+                <div
+                  key={`${currentSlide}-${index}`}
+                  className="bg-[#0a0618]/80 backdrop-blur rounded-2xl p-5 sm:p-6 border border-cyan-500/20
+                    hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(0,245,255,0.15)]
+                    transition-all duration-500 tilt-effect card-3d-hover group"
+                >
+                  {/* Icon */}
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {TechIcons[skill.name] || <div className="w-full h-full bg-cyan-500/20 rounded-lg" />}
                   </div>
-                  <h3 className={`text-lg font-bold font-exo ${getTextColor(skill.color)} group-hover:text-white transition-colors duration-300`}>
+
+                  {/* Name */}
+                  <h3 className="text-base sm:text-lg font-orbitron text-white mb-4">
                     {skill.name}
                   </h3>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400 font-exo">Proficiency</span>
-                    <span className="text-white font-semibold font-exo">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                    <div
-                        className={`progress-bar h-full bg-gradient-to-r ${getColorClasses(skill.color)} rounded-full shadow-lg`}
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="mt-4 pt-4 border-t border-white/10">
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <div
-                        key={i}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          i < Math.floor(skill.level / 20) 
-                            ? `bg-gradient-to-r ${getColorClasses(skill.color).split(' ')[0]} shadow-sm` 
-                            : 'bg-gray-600'
-                        }`}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-            </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-8 space-x-3">
-              {[...Array(totalSlides)].map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`nav-dot w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-gradient-to-r from-cyan-400 to-purple-400 scale-125'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
+                  {/* Progress */}
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-xs font-rajdhani">
+                      <span className="text-gray-500 tracking-wider">POWER</span>
+                      <span className="text-cyan-400 font-bold">{skill.level}%</span>
+                    </div>
+                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full 
+                          shadow-[0_0_10px_rgba(0,245,255,0.5)]"
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
 
-            {/* Auto-play Toggle */}
-            <div className="flex justify-center mt-4">
+            {/* Navigation - Side by Side */}
+            <div className="flex justify-center items-center gap-4 mt-8">
               <button
-                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  isAutoPlaying
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-400 text-white'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
+                onClick={prevSlide}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0a0618]/80 backdrop-blur rounded-xl border border-cyan-500/30
+                  hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,245,255,0.3)] transition-all duration-300 
+                  flex items-center justify-center"
               >
-                {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'}
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
+              </button>
+
+              <div className="flex space-x-2">
+                {[...Array(totalSlides)].map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentSlide
+                      ? 'bg-cyan-400 shadow-[0_0_10px_#00f5ff] scale-125'
+                      : 'bg-gray-600 hover:bg-gray-500'
+                      }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={nextSlide}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-[#0a0618]/80 backdrop-blur rounded-xl border border-cyan-500/30
+                  hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,245,255,0.3)] transition-all duration-300 
+                  flex items-center justify-center"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
               </button>
             </div>
-          </div>
-        </div>
 
-
-
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6 font-orbitron">Technology Stack</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center group">
-                <span className="inline-block"><svg className="w-12 h-12 mx-auto mb-2 text-cyan-400 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" /></svg></span>
-                <div className="text-lg font-bold text-cyan-400 mb-1 font-exo">Frontend</div>
-                <div className="text-gray-400 text-sm font-exo">React, Next.js, HTML/CSS</div>
-              </div>
-              <div className="text-center group">
-                <span className="inline-block"><svg className="w-12 h-12 mx-auto mb-2 text-purple-400 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 20v-6m0 0V4m0 10l-3-3m3 3l3-3" /></svg></span>
-                <div className="text-lg font-bold text-purple-400 mb-1 font-exo">Backend</div>
-                <div className="text-gray-400 text-sm font-exo">Node.js, Python, Django</div>
-              </div>
-              <div className="text-center group">
-                <span className="inline-block"><svg className="w-12 h-12 mx-auto mb-2 text-pink-400 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 20v-6m0 0V4m0 10l-3-3m3 3l3-3" /></svg></span>
-                <div className="text-lg font-bold text-pink-400 mb-1 font-exo">AI/ML</div>
-                <div className="text-gray-400 text-sm font-exo">Machine Learning</div>
-              </div>
-              <div className="text-center group">
-                <span className="inline-block"><svg className="w-12 h-12 mx-auto mb-2 text-lime-400 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 20v-6m0 0V4m0 10l-3-3m3 3l3-3" /></svg></span>
-                <div className="text-lg font-bold text-lime-400 mb-1 font-exo">Design</div>
-                <div className="text-gray-400 text-sm font-exo">Photoshop, Premiere</div>
-              </div>
+            <div className="flex justify-center mt-6">
+              <button
+                onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+                className={`px-5 py-2 rounded-full text-xs font-orbitron tracking-wider transition-all duration-300 
+                  flex items-center gap-2 border ${isAutoPlaying
+                    ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400'
+                    : 'bg-gray-800/50 border-gray-600 text-gray-400'
+                  }`}
+              >
+                {isAutoPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                {isAutoPlaying ? 'PAUSE' : 'RESUME'}
+              </button>
             </div>
           </div>
         </div>
