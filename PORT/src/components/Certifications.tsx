@@ -108,7 +108,141 @@ export default function Certifications() {
       thumbnail: 'https://ik.imagekit.io/ioyklag3bb/download.jpg',
       certificateUrl: 'https://drive.google.com/file/d/1sgs6FSOAA4Iqt8EIBkh7Uyrwm_7b9HCl/view?usp=drive_link',
       description: 'Geeks for Geeks Campus Mantri program.'
+    },
+
+    {
+      title: 'Certificate of Appreciation',
+      issuer: 'RKDF University Ranchi (Department of Computer Science & Engineering)',
+      date: '15th and 16th September 2025',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-12-11%20at%207.48.16%20PM.jpeg?updatedAt=1765464435594',
+      certificateUrl: 'https://drive.google.com/file/d/1AC2xp2siO23aNlO0_sjwlhrWrfeSBA8b/view?usp=drive_link',
+      description: 'Awarded to Prem Kumar, B.Tech (CSE) 5th Semester student, in recognition of valuable contribution as a member of the Organizing Committee for AAYAM TECHFEST 2025.'
+    },
+
+    {
+      title: 'Certificate of Participation',
+      issuer: 'CyberPeace, Google.org & Prabhat Khabar Media Group',
+      date: '8th December 2025',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-12-11%20at%207.48.17%20PM.jpeg?updatedAt=1765464429214',
+      certificateUrl: 'https://drive.google.com/file/d/1yhU1B2LJwX3UkpfSSkO6WX7hUWf3MncI/view?usp=drive_link',
+      description: 'Awarded to Prem Kumar from RKDF University for participation in "AI संवाद - Conversation on Cyber Safety & Innovation", an Official Pre-Summit Event of the AI Impact Summit 2026, held at Hotel Radisson Blu, Ranchi.'
+    },
+
+    {
+      title: 'Internship Confirmation - Development Team',
+      issuer: 'Pantech Prolabs India Pvt Ltd (Pantech.AI)',
+      date: 'Jun 28, 2025 - Sep 28, 2025 (3 Months)',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/pantechai_logo.jpg?updatedAt=1763750139448',
+      certificateUrl: 'https://drive.google.com/file/d/1DAyW9eLqTdN7NPeKUXgN_ODHXALYH3Np/view?usp=drive_link',
+      description: 'Selected for a 3-month online internship in the Development Team under the supervision of Sanjay at Pantech.AI, a subsidiary of Pantech Group Companies.'
+    },
+
+    {
+      title: 'Certificate of Completion - AI Tools Mastery Program',
+      issuer: 'Be10x (ISO 9001:2015 Certified)',
+      date: '26-07-2025',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-26%20at%201.31.01%20PM.jpeg?updatedAt=1763749773427',
+      certificateUrl: 'https://drive.google.com/file/d/19AkeEkkvzPl52_fGKojd108YSs9VpDML/view?usp=drive_link',
+      description: 'Completed the AI Tools Mastery Program by Be10x, gaining hands-on experience with various AI tools and technologies.'
+    },
+
+    {
+      title: 'Certificate of Participation - Hackathon (EKLAVYA TECHFEST 2025)',
+      issuer: 'Dr. Shyama Prasad Mukherjee University, Ranchi (Department of Computer Application DSPMU)',
+      date: '23rd and 24th April 2025',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-06%20at%201.47.54%20PM.jpeg?updatedAt=1763749773732',
+      certificateUrl: 'https://drive.google.com/file/d/1dkZP7OO357EwZLRbA9RG6_Px0Ow2RR-t/view?usp=drive_link',
+      description: 'Participated in the Hackathon (EKLAVYA TECHFEST 2025) organized by the Department of Computer Application, Dr. Shyama Prasad Mukherjee University, Ranchi.'
+    },
+
+    {
+      title: 'Certificate of Appreciation - SymbioSphere 2024 (Volunteer)',
+      issuer: 'RKDF University Ranchi & Association of Indian Universities (AIU)',
+      date: '22nd & 23rd June 2024',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-06%20at%201.42.58%20PM.jpeg?updatedAt=1763749773796',
+      certificateUrl: 'https://drive.google.com/file/d/1lBbz5hNM9hJQACqdcnV-yjTNEiPOgxhh/view?usp=drive_link',
+      description: 'Recognized for contributions as a volunteer in the 2-day International Conference "Navigating the intersection of Science, Technology & Pharmaceuticals with Ecofriendly Solutions towards Sustainability - SymbioSphere 2024", organized by Faculty of Life Sciences, Basic Science, Pharmaceutical Sciences & Engineering under IQAC, RKDF University Ranchi.'
+    },
+
+    {
+      title: 'Certificate of Participation - Best Paper Presentation (Gold Medal)',
+      issuer: 'RKDF University Ranchi (IQAC) & Association of Indian Universities (AIU)',
+      date: '22nd & 23rd June 2024',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-06%20at%201.33.34%20PM.jpeg?updatedAt=1763749773567',
+      certificateUrl: 'https://drive.google.com/file/d/12CbE0uE2SZyedA7Z_BoFpjt8XzOvB-ii/view?usp=drive_link',
+      description: 'Awarded Gold Medal for presenting the best paper entitled "Recycling Processes for Photovoltaic Modules: A Review" at the Two Days International Conference "Navigating the Intersection of Science, Technology and Pharmaceuticals with Ecofriendly Solutions towards Sustainability - SymbioSphere 2024", organized by Faculty of Life Sciences, Basic Science, Pharmaceutical Sciences & Engineering under IQAC, RKDF University Ranchi'
+    },
+
+
+     {
+      title: 'Certificate of Participation - SymbioSphere 2024',
+      issuer: 'RKDF University Ranchi (IQAC) & Association of Indian Universities (AIU)',
+      date: '22nd & 23rd June 2024',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-06%20at%201.39.13%20PM.jpeg?updatedAt=1763749773623',
+      certificateUrl: 'https://drive.google.com/file/d/16Ll98puA7A8wuwrsYFdB406vv13f4DXs/view?usp=drive_link',
+      description: 'Awarded to Prem Kumar, B.Tech CSE from RKDF University Ranchi for participating/presenting a paper at the Two Days International Conference "Navigating the Intersection of Science, Technology and Pharmaceuticals with Ecofriendly Solutions towards Sustainability - SymbioSphere 2024", organized by Faculty of Life Sciences, Basic Science, Pharmaceutical Sciences & Engineering under IQAC.'
+    },
+
+    {
+      title: 'Certificate of Training - Artificial Intelligence',
+      issuer: 'InnoKnowVex (Verified by MSME, Govt. of India & Startup India)',
+      date: 'InnoKnowVex (Verified by MSME, Govt. of India & Startup India)',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/Prem%20Kumar%20%20-%20Training%20Certificate.png?updatedAt=1763750141690',
+      certificateUrl: 'https://drive.google.com/file/d/1eEAc9sigKpHN99GYQivDC5rFxLgLwJNk/view?usp=drive_link',
+      description: 'Awarded to Prem Kumar for successful completion of training in Artificial Intelligence. Recognized for hard work, commitment, and excellence that contributed to the success of the team.'
+    },
+
+    {
+      title: 'Certificate of Excellence - Stock Market Advance Trading',
+      issuer: 'Research In and Out (REO)',
+      date: '11-11-2023',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/WhatsApp%20Image%202025-07-06%20at%201.52.11%20PM.jpeg?updatedAt=1763749773572',
+      certificateUrl: 'https://drive.google.com/file/d/10SHNmBO8EhUHGNa5IEtKvPhFr632RC-N/view?usp=drive_link',
+      description: 'Awarded to Prem Kumar for successfully completing the course on "Stock Market Advance Trading" with Research In and Out under the guidance of Raushan Singh.'
+    },
+
+    {
+      title: 'Certificate of Internship - Python Bootcamp',
+      issuer: 'Pantech Prolabs India Pvt Ltd (Pantech Solutions)',
+      date: '14/8/2025',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/certificate-20251101014110.png?updatedAt=1763749775148',
+      certificateUrl: 'https://drive.google.com/file/d/1aTqBAhkRqsKF5GVVV7h_JyNRn33irbNO/view?usp=drive_link',
+      description: 'Awarded to Prem for successfully completing the Internship on Python Bootcamp at Pantech Prolabs India Pvt Ltd.'
+    },
+
+    {
+      title: '	Internship Offer Letter - AI/ML Intern',
+      issuer: '3SKILL',
+      date: '05/01/2026 - 05/03/2026 (2 Months)',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/download.png',
+      certificateUrl: 'https://drive.google.com/file/d/10v7Z4aqW3QsL3qMZqKdK2ZeQGJPWKNuI/view?usp=drive_link',
+      description: 'Offered an internship opportunity at 3SKILL as an AI/ML Intern for a duration of 2 months. This is an unpaid internship with a certificate to be provided upon successful completion.'
+    },
+
+
+    {
+      title: '	Internship Offer Letter - AI & Machine Learning (AICTE x IBM SkillsBuild)',
+      issuer: '	Edunet Foundation & AICTE (IBM SkillsBuild Program)',
+      date: '	15th January 2026 - 26th February 2026 (6 Weeks)',
+      icon: Award,
+      thumbnail: 'https://ik.imagekit.io/ioyklag3bb/cef%20thumb/channels4_profile.jpg',
+      certificateUrl: 'https://drive.google.com/file/d/147neN4jSPbJKIeEjRBkCD-OCKx48HkJf/view?usp=drive_link',
+      description: 'Selected for a 6-week internship on Artificial Intelligence & Machine Learning through Edunet Foundations IBM SkillsBuild Program. Involves project-based learning, masterclasses led by Subject Matter Experts, and certification from AICTE and Edunet Foundation.'
     }
+
+
   ];
 
   useEffect(() => {
