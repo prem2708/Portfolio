@@ -83,6 +83,18 @@ export default function Projects() {
       icon: Rocket,
       github: 'https://github.com/prem2708/prem_new_portfolio.git',
       demo: 'https://premnewport.netlify.app/'
+    },
+
+    {
+      title: 'AI-Powered Study Buddy ',
+      codename: 'STUDYBUDDY',
+      description: 'AI-powered study companion for personalized learning.',
+      image: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202026-03-06%20231712.png',
+      tech: ['Python', 'Streamlit', 'Groq (Llama/Whisper)', 'Supabase'],
+      status: 'DEPLOYED',
+      icon: Rocket,
+      github: 'https://github.com/prem2708/AI-Powered-Study-Buddy.git',
+      demo: 'https://ai-powered-study-buddy-prem.streamlit.app/'
     }
   ];
 
