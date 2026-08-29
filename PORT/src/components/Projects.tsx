@@ -95,6 +95,29 @@ export default function Projects() {
       icon: Rocket,
       github: 'https://github.com/prem2708/AI-Powered-Study-Buddy.git',
       demo: 'https://ai-powered-study-buddy-prem.streamlit.app/'
+    },
+    {
+      title: 'AAYAM TECHFEST 2026 - REGISTRATION WEBSITE  ',
+      codename: 'AAYAM',
+      description: 'This is for the registration in events ',
+      image: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202026-08-29%20170453.png',
+      tech: ['Next.JS ', 'Clerk', 'Express JS', 'Supabase'],
+      status: 'DEPLOYED',
+      icon: Rocket,
+      github: 'https://github.com/prem2708/aayam2026.git',
+      demo: 'https://aayamtechfest2026.vercel.app/'
+    },
+
+    {
+      title: 'CODEVED CODING CLUB - REGISTRATION WEBSITE  ',
+      codename: 'CODING',
+      description: 'This is for the registration in CLUB  ',
+      image: 'https://ik.imagekit.io/ioyklag3bb/Screenshot%202026-08-29%20170510.png',
+      tech: ['Next.JS ', 'Clerk', 'Express JS', 'Supabase'],
+      status: 'DEPLOYED',
+      icon: Rocket,
+      github: '',
+      demo: 'https://codeved.vasudevai.in/'
     }
   ];
 

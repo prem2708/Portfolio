@@ -126,7 +126,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
               <a
-                href="https://drive.google.com/file/d/1IBxhhcCu6zar4fynFSGlx60G1qXaBfve/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1GvJgdK3lBqbTOYWt4Pdouos_PfI0zYsD/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="space-btn space-btn-primary shine-effect icon-spin-hover rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
